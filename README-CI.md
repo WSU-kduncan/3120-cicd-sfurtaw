@@ -10,5 +10,5 @@ In this project I am walking through the setup and deployment of a containerized
 2. Install Docker Desktop for Windows from <https://www.docker.com/products/docker-desktop/>
 3. Change to the project directory
 4. Run `docker build -t website-docker .` to build the base image
-5. Spin up an instance by running `docker run --name website-instance -d -p 10000:80 website-docker`
+5. Spin up an instance by running `docker run --name website-instance -d -p 10000:80 website-docker` (port 10000 is allowed to be bound by non-admins on Windows/Unix)
 6. Visit <http://127.0.0.1:10000> in your web browser
