@@ -4,6 +4,10 @@
 
 In this project I am walking through the setup and deployment of a containerized instance of nginx to demonstrate the use of Continuous Integration tools in a development/release stack. To containerize the image, we are using Docker, which is cross-platform. We will also be using DockerHub to make the image available in combination with GitHub Actions.
 
+## Diagram
+
+![Diagram](diagram.jpg)
+
 ## Run the project locally
 
 1. Enable WSL by running `wsl --install` (version 2 is enabled by default)
