@@ -23,4 +23,7 @@ Whenever tags are pushed to upstream:
 
 * Publish image to DockerHub versioned with tags and separate image for `latest`
 
+## Link to repository
 
+Tags page
+<https://hub.docker.com/repository/docker/sfurtaw/docker-website/tags?page=1&ordering=last_updated>
