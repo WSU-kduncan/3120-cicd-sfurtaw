@@ -87,7 +87,7 @@ Resources:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
       VpcId: !Ref VPC
-      GroupDescription: Enable SSH access via port 22 and open all insternal ports.
+      GroupDescription: Enable SSH access via port 22 and open all insternal ports AND allow global port 80 AND 9000 for webhook
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: '22'
@@ -105,6 +105,14 @@ Resources:
           FromPort: '22'
           ToPort: '22'
           CidrIp: 192.168.0.0/23  # Internal
+        - IpProtocol: tcp
+          FromPort: '80'
+          ToPort: '80'
+          CidrIp: 0.0.0.0/0 # Global 80
+        - IpProtocol: tcp
+          FromPort: '9000'
+          ToPort: '9000'
+          CidrIp: 0.0.0.0/0 # Global 9000
         - IpProtocol: -1
           FromPort: '-1'
           ToPort: '-1'
@@ -152,4 +160,9 @@ Resources:
               docker-ce-cli \
               webhook \
               pip3 && \
-            echo "This is from the CF template" > /home/ubuntu/hello.txt
+            git clone https://github.com/WSU-kduncan/3120-cicd-sfurtaw /home/ubuntu/repo && \
+            cp /home/ubuntu/repo/deployment/hooks.json /etc/webhooks.conf && \
+            systemctl enable docker && \
+            systemctl restart docker && \
+            docker pull sfurtaw/docker-website:latest && \
+            docker run --name docker-website -d -p 80:80 sfurtaw/docker-website:latest
