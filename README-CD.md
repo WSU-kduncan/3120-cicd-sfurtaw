@@ -9,6 +9,10 @@ Tools used:
 * Docker
 * DockerHub
 
+## Diagram
+
+![Diagram](diagram2.png)
+
 ## Generate a tag in Git/GitHub
 
 Before making your commit:
