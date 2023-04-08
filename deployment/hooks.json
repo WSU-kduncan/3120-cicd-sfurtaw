@@ -1,0 +1,7 @@
+[
+    {
+      "id": "redeploy-webhook",
+      "execute-command": "/home/ubuntu/repo/deployment/pull-and-restart.sh",
+      "command-working-directory": "/home/ubuntu/"
+    }
+  ]
