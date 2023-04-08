@@ -148,5 +148,7 @@ Resources:
             apt-get install -y \
               git \
               python3 \
+              docker-ce \
+              docker-ce-cli \
               pip3 && \
             echo "This is from the CF template" > /home/ubuntu/hello.txt
