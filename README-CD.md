@@ -68,7 +68,7 @@ The Ubuntu version was bumped up to 22 LTS to make this easier - it is also auto
 sudo apt update
 sudo apt install webhook
 sudo systemctl enable webhook
-sudo cp </path/to/hooks.json> /etc/webhook.conf
+sudo cp /path/to/hooks.json /etc/webhook.conf
 sudo systemctl start webhook
 ```
 
