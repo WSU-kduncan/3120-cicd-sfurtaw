@@ -82,7 +82,7 @@ It should be located at `/etc/webhook.conf`. (CF handles this)
 
 1. Go to repository page
 2. Click Webhooks
-3. Enter a name and enter this URL: `http://<EC2 elastic IP>/hooks/redeploy-webhook`
+3. Enter a name and enter this URL: `http://<EC2 elastic IP>:9000/hooks/redeploy-webhook`
 4. Click Create
 
 ## Recorded process
