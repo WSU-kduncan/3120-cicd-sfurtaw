@@ -15,7 +15,7 @@ Tools used:
 
 ## Generate a tag in Git/GitHub
 
-Before making your commit:
+After making your commit:
 `git tag -a <version> -m <tag description>`
 
 Tags aren't included with a push by default - modify your push command:
